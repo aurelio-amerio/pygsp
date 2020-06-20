@@ -63,7 +63,7 @@ class SphereHealpix(NNGraph):
         coords = np.vstack([x, y, z]).transpose()
         coords = np.asarray(coords, dtype=np.float32)
         if n_neighbors is None:
-            n_neighbors = 6 if Nside==1 else 8
+            n_neighbors = 6 if nside==1 else 8
             
         self.opt_std = dict()
         # TODO: find best interpolator between n_side and n_neighbors.
